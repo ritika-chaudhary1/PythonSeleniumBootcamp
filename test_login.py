@@ -105,3 +105,11 @@ def test_login(driver):
     assert driver.title == "The Internet"
     assert driver.find_element(By.CSS_SELECTOR, "h2").text == "Secure Area"
     assert "Secure" in driver.page_source
+
+
+# Second test
+def test_page_title(driver):
+
+    driver.get("https://the-internet.herokuapp.com/login")
+
+    assert driver.title == "The Internet" 
